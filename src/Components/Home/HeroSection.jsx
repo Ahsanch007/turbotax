@@ -4,11 +4,11 @@ export const HeroSection = () => {
   return (
     <div className="pt-[80px] pb-[40px] text-black bg-[#F4F5F8]">
       <div className="container mx-auto px-[24px]">
-        <div className="grid grid-cols-12 items-center">
-          <div className="col-span-12 md:col-span-4">
+        <div className="grid grid-cols-12 items-center gap-4">
+          <div className="col-span-12 md:col-span-6 lg:col-span-5">
             <div className="">
               <h2 className="lg:text-[40px] md:leading-[52px] font-bold text-[#393a3d] text-[28px] leading-[44px] pb-[24px]">
-                Switch to TurboTax <br /> and get 50% off Full Service!
+                Switch to TurboTax and get 50% off Full Service!
               </h2>
               <p className="text-[20px] pb-[24px]">
                 Make the switch from a non-TurboTax tax professional to get 50% off any Full Service product.
@@ -39,10 +39,10 @@ export const HeroSection = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-12 md:col-span-4">
+          <div className="col-span-12 md:col-span-3 block sm:hidden lg:block">
             <img src="/assets/images/-Desktop-_HP_Zone_A_-_Maria.webp" alt="" />
           </div>
-          <div className="col-span-12 md:col-span-4">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <div className="card">
               <div class="rounded-sm shadow-sm text-gray-400 bg-white p-5 text-left">
                 <div className=" flex justify-center py-3">

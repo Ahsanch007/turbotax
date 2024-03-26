@@ -10,32 +10,156 @@ const Header = () => {
       id: 1,
       name: 'File with experts',
       subMenu: [
-        { id: 11, name: 'Expert 1' },
-        { id: 12, name: 'Expert 2' },
+        {
+          id: 11,
+          name: 'TurboTax ',
+          name2: ' Full Service',
+          img: '/assets/images/icon-difm.svg',
+          live: '/assets/images/logo-live.svg',
+          desc: 'A tax expert files your taxes',
+        },
+
+        {
+          id: 12,
+          name: 'TurboTax Assist & Review ',
+
+          img: '/assets/images/icon-diwm.svg',
+          desc: 'File your taxes with expert help',
+        },
+
+        {
+          id: 13,
+          name: 'TurboTax Self-Employed ',
+
+          img: '/assets/images/icon-self-employed.svg',
+
+          desc: 'Expert reviews your self-employed taxes, or does it for you',
+        },
       ],
     },
     {
       id: 2,
       name: 'File myself',
       subMenu: [
-        { id: 21, name: 'File Option 1' },
-        { id: 22, name: 'File Option 2' },
+        {
+          id: 13,
+          name: 'TurboTax Online ',
+
+          img: '/assets/images/icon-tto.svg',
+
+          desc: 'File your taxes by yourself',
+        },
+
+        {
+          id: 14,
+          name: 'TurboTax Download ',
+
+          img: '/assets/images/icon-t4-import.svg',
+          desc: 'File your taxes with desktop software',
+        },
+
+        {
+          id: 15,
+          name: 'TurboTax Self-Employed ',
+
+          img: '/assets/images/icon-self-employed.svg',
+
+          desc: 'File your own self-employed taxes online',
+        },
       ],
     },
     {
       id: 3,
       name: 'Tax situations',
       subMenu: [
-        { id: 31, name: 'Situation 1' },
-        { id: 32, name: 'Situation 2' },
+        {
+          id: 16,
+          name: 'For investors ',
+
+          img: '/assets/images/icon-stocks-and-bonds.svg',
+
+          desc: 'Accurately report investment tax, from stock sales to rental income',
+        },
+
+        {
+          id: 17,
+          name: 'For students',
+
+          img: '/assets/images/icon-student.svg',
+          desc: 'Claim credits and deductions for going to school',
+        },
+
+        {
+          id: 18,
+          name: 'For self-employed ',
+
+          img: '/assets/images/icon-self-employed.svg',
+
+          desc: 'File accurately and find deductions for your industry',
+        },
+        {
+          id: 19,
+          name: 'For new to Canada',
+
+          img: '/assets/images/icon-ca-flag.svg',
+
+          desc: 'We know Canadian taxes. We’ll get yours done right.',
+        },
       ],
     },
     {
       id: 4,
       name: 'Tools & resources',
       subMenu: [
-        { id: 41, name: 'Tool 1' },
-        { id: 42, name: 'Tool 2' },
+        {
+          id: 19,
+          name: 'Personal income tax calculator ',
+
+          img: '/assets/images/icon-tax-calculator.svg',
+
+          desc: 'Free Canadian income tax calculator to quickly estimate your federal and provincial taxes',
+        },
+
+        {
+          id: 20,
+          name: 'RRSP savings calculator ',
+
+          img: '/assets/images/icon-rrsp-calculator.svg',
+          desc: 'Estimate how much your RRSP will be worth at retirement',
+        },
+
+        {
+          id: 21,
+          name: 'Self-employed tax calculator ',
+
+          img: '/assets/images/icon-se-calculator.svg',
+
+          desc: 'Calculate your self-employment tax and maximize your tax savings by estimating your business expenses',
+        },
+        {
+          id: 22,
+          name: 'Learning hub',
+
+          img: '/assets/images/icon-blog.svg',
+
+          desc: 'See TurboTax news, updates, articles, tax guides, and more',
+        },
+        {
+          id: 23,
+          name: 'TurboTax support (FAQ)',
+
+          img: '/assets/images/icon-question-mark.svg',
+
+          desc: 'Find TurboTax help, how-to videos, and more',
+        },
+        {
+          id: 24,
+          name: 'TurboTax community',
+
+          img: '/assets/images/icon-community.svg',
+
+          desc: 'Discuss taxes and get answers from other TurboTax users',
+        },
       ],
     },
     {
@@ -61,7 +185,7 @@ const Header = () => {
             <div className="logo py-[12px]">
               <img src="/assets/images/turbotax_logo_no_intuit.svg" alt="" />
             </div>
-            <div className="menu-items hidden md:block">
+            <div className="menu-items hidden lg:block">
               <ul className="list-none flex items-center p-0 m-0">
                 {navbarData.map((item, index) => (
                   <li
@@ -89,17 +213,24 @@ const Header = () => {
                       </svg>
                     )}
                     {isSubMenuOpen === index && item.subMenu && (
-                      <div className="submenu bg-white shadow-lg w-full absolute  top-[45px] left-0 mt-1">
-                        <ul className="list-none p-0 m-0">
-                          {item.subMenu.map((subItem) => (
-                            <li
-                              key={subItem.id}
-                              className="text-[14px] relative flex items-center gap-2 py-2 px-4 cursor-pointer transition-all text-black hover:text-[#037c8f]"
-                            >
-                              {subItem.name}
-                            </li>
-                          ))}
-                        </ul>
+                      <div
+                        className="submenu bg-white rounded-[6px] p-4   min-w-[340px] absolute  top-[45px] left-0 mt-1"
+                        style={{ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 7px 20px, rgba(0, 0, 0, 0.1) 0px 14px 40px' }}
+                      >
+                        {item.subMenu.map((sub) => (
+                          <div class="mm-dropdown-item-wrapper css-r27krc flex p-2 gap-3 items-center transition-all hover:bg-[#ebf9ff]">
+                            <img alt="" src={sub.img} width="40" height="40" class="css-1xrpoo7" />
+                            <div class="css-1pysja1">
+                              <p class="css-8tevtg flex gap-2 items-center text-[#393a3d] text-[16px] font-semibold">
+                                {sub.name}
+
+                                {!sub.live ? '' : <img src={sub.live} class="css-1gsj6m5 w-[20px] h-[16px]" />}
+                                {sub.name2}
+                              </p>
+                              <p class="text-[#393a3d] text-[14px]  ">{sub.desc}</p>
+                            </div>
+                          </div>
+                        ))}
                       </div>
                     )}
                   </li>

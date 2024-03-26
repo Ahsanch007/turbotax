@@ -9,8 +9,9 @@ export const TaxesSection = () => {
             Taxes done right, however <br /> you choose
           </h1>
         </div>
-        <div className="mt-[40px] grid grid-cols-12 gap-4">
-          <div className="col-span-12 lg:col-span-4">
+
+        <div className="mt-[40px] grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-4 ">
+          <div className=" ">
             <div
               class=" flex flex-col h-full w-full border-t-4 border-[#037c8f] text-current text-left bg-white border-b-transparent px-[20px] pt-[20px] pb-[20px] shadow-md justify-between"
               style={{ borderTopLeftRadius: '4px', borderTopRightRadius: '4px' }}
@@ -52,7 +53,7 @@ export const TaxesSection = () => {
               <img src="/assets/images/Tim_Couch_Claimed_Tax_Refund.webp" alt="" />
             </div>
           </div>
-          <div className="col-span-12 lg:col-span-4">
+          <div className=" ">
             <div
               class=" flex flex-col h-full w-full border-t-4 border-[#055393] text-current text-left bg-white border-b-transparent px-[20px] pt-[20px] pb-[20px] shadow-md justify-between"
               style={{ borderTopLeftRadius: '4px', borderTopRightRadius: '4px' }}
@@ -96,7 +97,7 @@ export const TaxesSection = () => {
               <img src="/assets/images/Kahrim_Tax_Expert_Cards.webp" alt="" />
             </div>
           </div>
-          <div className="col-span-12 lg:col-span-4">
+          <div className=" ">
             <div
               class=" flex flex-col h-full w-full border-t-4 border-[#b80000] text-current text-left bg-[#062a47] border-b-transparent px-[20px] pt-[20px] pb-[20px] shadow-md justify-between"
               style={{ borderTopLeftRadius: '4px', borderTopRightRadius: '4px' }}
