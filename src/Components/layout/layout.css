@@ -2,3 +2,12 @@
   border-color: #0077c5; /* Change this to your desired border color */
   /* Add any other styling you want when the input is focused */
 }
+.mobile-menu2 {
+  transition: transform 0.3s ease;
+  transform: translateY(-100%);
+}
+
+.mobile-menu2.open {
+  transform: translateY(0);
+  top: 50px;
+}
