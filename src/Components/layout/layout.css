@@ -11,3 +11,30 @@
   transform: translateY(0);
   top: 50px;
 }
+
+.css-1rd0u456 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 600;
+  color: #393a3d;
+  padding-bottom: 0;
+}
+.css-wen1d3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #393a3d;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 500;
+  width: 100%;
+  padding: 6px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.css-wen1d3:hover {
+  background-color: #d9edfa;
+}

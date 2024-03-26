@@ -36,6 +36,12 @@ export const MobileMenu = () => {
           desc: 'Expert reviews your self-employed taxes, or does it for you',
         },
       ],
+      other: [
+        {
+          id: 1,
+          name: 'Prior year taxes',
+        },
+      ],
     },
     {
       id: 2,
@@ -65,6 +71,24 @@ export const MobileMenu = () => {
           img: '/assets/images/icon-self-employed.svg',
 
           desc: 'File your own self-employed taxes online',
+        },
+      ],
+      other: [
+        {
+          id: 1,
+          name: 'TurboTax Free',
+        },
+        {
+          id: 2,
+          name: 'Business taxes',
+        },
+        {
+          id: 3,
+          name: 'Activate your product',
+        },
+        {
+          id: 4,
+          name: 'Prior year taxes',
         },
       ],
     },
@@ -175,7 +199,7 @@ export const MobileMenu = () => {
   };
   return (
     <>
-      <div className="block md:hidden" onClick={toggleMenu}>
+      <div className="block lg:hidden" onClick={toggleMenu}>
         <Hamburger size={20} color="#000" />
       </div>
       <div
@@ -211,22 +235,39 @@ export const MobileMenu = () => {
                 )}
                 {openIndex === index && item.subMenu && (
                   <div
-                    className="submenu bg-white rounded-[6px] p-4 min-w-full absolute  z-50 transition-all top-[45px] left-0 mt-1"
+                    className="submenu bg-white rounded-[6px]   min-w-full absolute  z-50 transition-all top-[45px] left-0 mt-1"
                     style={{ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 7px 20px, rgba(0, 0, 0, 0.1) 0px 14px 40px' }}
                   >
-                    {item.subMenu.map((sub) => (
-                      <div className="mm-dropdown-item-wrapper css-r27krc flex p-2 gap-3 items-center transition-all hover:bg-[#ebf9ff]">
-                        <img alt="" src={sub.img} width="40" height="40" className="css-1xrpoo7" />
-                        <div className="css-1pysja1">
-                          <p className="css-8tevtg flex gap-2 items-center text-[#393a3d] text-[16px] font-semibold">
-                            {sub.name}
-                            {!sub.live ? '' : <img src={sub.live} className="css-1gsj6m5 w-[20px] h-[16px]" />}
-                            {sub.name2}
-                          </p>
-                          <p className="text-[#393a3d] text-[14px]">{sub.desc}</p>
+                    <div className="mm-dropdown-item-wrapper css-r27krc ">
+                      {item.subMenu.map((sub) => (
+                        <div className="flex px-4 py-3 gap-3 items-center transition-all hover:bg-[#ebf9ff]">
+                          <img alt="" src={sub.img} width="40" height="40" className="css-1xrpoo7" />
+                          <div className="css-1pysja1">
+                            <p className="css-8tevtg flex gap-2 items-center text-[#393a3d] text-[16px] font-semibold">
+                              {sub.name}
+                              {!sub.live ? '' : <img src={sub.live} className="css-1gsj6m5 w-[20px] h-[16px]" />}
+                              {sub.name2}
+                            </p>
+                            <p className="text-[#393a3d] text-[14px]">{sub.desc}</p>
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                      {item.name == 'Tools & resources' || item.name == 'Tax situations' ? (
+                        ' '
+                      ) : (
+                        <div className="bg-[#ebf9ff] p-4 mt-2">
+                          <div className="flex gap-2 items-center pl-4">
+                            <img src="/assets/images/glyph-my-turbotax.svg" alt="" />
+                            <p class="css-1rd0u456">Other options</p>
+                          </div>
+                          <div className="flex flex-col  ">
+                            {item.other.map((option) => (
+                              <a class="css-wen1d3 pl-4 mt-1">{option.name}</a>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 )}
               </li>
