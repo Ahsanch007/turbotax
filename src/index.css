@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-gray-100;
+    /* background: linear-gradient(116.83deg, #070D28 0%, #09264F 100.23%, #0D61AA 100.24%); */
+  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.recharts-legend-wrapper{
+    display: none !important;
+}
+::-webkit-scrollbar {
+    width: 0px; /* You can adjust the width to your preference */
+  }
+
+  
+.bg-download {
+    background-image: url("../src/assets/Hero/hero-bg.svg");
+    background-color: black;
+    background-position: 100% 50%;
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+  
+  .btn-gradient {
+    color: #fbfbfd;
+    background: linear-gradient(95.14deg, #e52c43, #ff6c00 91.74%);
+  }
